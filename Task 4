@@ -78,7 +78,7 @@ void DisplayTable(int a[], int k, int n)
 		if (j % k == 0)
 		{
 			cout << endl;
-			cout << '\t';
 		}	
+		cout << '\t';
 	}
 }
