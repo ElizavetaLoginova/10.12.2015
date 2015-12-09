@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std;
+
+void EnterArray(int a[], int n);
+void DisplayArray(int[], int);
+void Swap(int[], int[]);
+void TransferInTheBinarySystem(int[], int);
+void SortByTheNumberOfDigits(int[], int);
+int EnterDimention(int);
+
+int main()
+{
+	while (true)
+	{
+		system("cls");
+		const int N = 100;
+		int a[N] = { 0 };
+		int n = EnterDimention(N);
+		EnterArray(a, n);
+		cout << "Source array: " << endl;
+		DisplayArray(a, n);
+		cout << endl << "Array in the binary system: " << endl;
+		TransferInTheBinarySystem(a, n);
+		DisplayArray(a, n);
+		SortByTheNumberOfDigits(a, n);
+		cout << endl << "SortedArray: " << endl;
+		DisplayArray(a, n);
+		system("pause");
+		system("cls");
+
+		char yes;
+		cout << "Would you like to countinie? Press y/Y: " << endl;
+		cin >> yes;
+		if (yes == 'y' || yes == 'Y')
+			continue;
+		break;
+	}
+	return 0;
+}
+
+void EnterArray(int a[], int n)
+{
+	cout << "Enter array elements: " << endl;
+	for (int i = 0; i < n; i++)
+	{
+		cout << "a[" << (i + 1) << "] = ";
+		cin >> a[i];
+	}
+}
+
+void DisplayArray(int a[], int n)
+{
+	for (int i = 0; i < n; i++)
+		cout << a[i] << ", ";
+}
+
+void Swap(int &a, int &b)
+{
+	int t = a;
+	a = b;
+	b = t;
+}
