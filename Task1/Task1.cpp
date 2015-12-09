@@ -67,7 +67,7 @@ int EnterDimention(int n)
 	{
 		cout << "Enter the amount of elements (n <= 100): ";
 		cin >> k;
-		if (k > 0 && k <= n) return k; //n=N, n=k
+		if (k > 0 && k <= n) return k; 
 		cout << "Error! Try again...";
 	}
 
