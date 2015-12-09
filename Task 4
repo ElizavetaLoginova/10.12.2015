@@ -73,12 +73,12 @@ void DisplayTable(int a[], int k, int n)
 	int j = 0;
 	for (int i = 0; i < n; i++)
 	{
-		cout << a[i] << ' ';
+		cout <<  a[i] << ' ';
 			j++;
 		if (j % k == 0)
 		{
-			cout << endl;
+			cout  << endl;
+			cout.width(j + 3);
 		}	
-		cout << '\t';
 	}
 }
